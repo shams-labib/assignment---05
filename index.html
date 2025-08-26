@@ -15,11 +15,11 @@
       <div class="parent-container flex justify-between items-center mt-5 md:max-w-[90%] mx-auto p-1 flex-wrap md:p-0">
         <div class="flex">
              <img class="h-[50px] w-[50px]" src="./assets/logo.png" alt="">
-             <h1 class="font-extrabold text-green-800 ml-3">Emergency<br>Service</h1>
+             <h1 class="font-extrabold text-xl text-green-800 ml-3">Emergency<br>Service</h1>
         </div>
 
         <div>
-           <button class="btn bg-[#41ff6b1a] rounded-4xl border-none"> <span>0</span> <span class="w-[25px] h-[25px]"><img src="./assets/heart.png" alt=""></span></button>
+           <button class="btn bg-[#41ff6b1a] rounded-4xl border-none"> <span id="heart-icon">0</span> <span class="w-[25px] h-[25px]"><img src="./assets/heart.png" alt=""></span></button>
            <button class="btn bg-[#41ff6b1a] rounded-4xl border-none"><span>100</span> <img class="w-[25px] h-[25px]" src="./assets/coin.png" alt=""></button>
            <button class="btn bg-[#00a63e] w-[90px] rounded-4xl border-none text-white"><span>2</span> Copy</button>
         </div>
@@ -49,7 +49,7 @@
     <div class="h-[330px] w-auto shadow-md rounded-lg p-7">
       <div class="flex justify-between">
         <img class="h-[45px] w-[45px] bg-[#FFE3E2] p-2 rounded-xl" src="./assets/emergency.png" alt="">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <span class="icon-heart cursor-pointer"><i class="fa-regular fa-heart"></i></span>
       </div>
       <h2 class="text-[24px] font-bold mt-3">National Emergency Number</h2>
       <p class="font-[400] mb-3">National Emergency</p>
@@ -66,7 +66,7 @@
     <div class="h-[330px] w-auto shadow-md rounded-lg p-7">
       <div class="flex justify-between">
         <img class="h-[45px] w-[45px] bg-[#DFEFFF] p-2 rounded-xl" src="./assets/police.png" alt="">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <span class="icon-heart cursor-pointer"><i class="fa-regular fa-heart"></i></span>
       </div>
       <h2 class="text-[24px] font-bold mt-3">Police Helpline Number</h2>
       <p class="font-[400] mb-3">Police</p>
@@ -83,7 +83,7 @@
     <div class="h-[330px] w-auto shadow-md rounded-lg p-7">
       <div class="flex justify-between">
         <img class="h-[45px] w-[45px] bg-[#FFE3E2] p-2 rounded-xl" src="./assets/fire-service.png" alt="">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <span class="icon-heart cursor-pointer"><i class="fa-regular fa-heart"></i></span>
       </div>
       <h2 class="text-[24px] font-bold mt-3">Fire Service Number</h2>
       <p class="font-[400] mb-3">Fire Service</p>
@@ -100,7 +100,7 @@
     <div class="h-[330px] w-auto shadow-md rounded-lg p-7">
       <div class="flex justify-between">
         <img class="h-[45px] w-[45px] bg-[#FFE3E2] p-2 rounded-xl" src="./assets/ambulance.png" alt="">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <span class="icon-heart cursor-pointer"><i class="fa-regular fa-heart"></i></span>
       </div>
       <h2 class="text-[24px] font-bold mt-3">Ambulance Service</h2>
       <p class="font-[400] mb-3">Ambulance</p>
@@ -116,7 +116,7 @@
     <div class="h-[330px] w-auto shadow-md rounded-lg p-7">
       <div class="flex justify-between">
         <img class="h-[45px] w-[45px] bg-[#FFE3E2] p-2 rounded-xl" src="./assets/emergency.png" alt="">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <span class="icon-heart cursor-pointer"><i class="fa-regular fa-heart"></i></span>
       </div>
       <h2 class="text-[24px] font-bold mt-3">Women & Child Helpline</h2>
       <p class="font-[400] mb-3">Women & Child Helpline</p>
@@ -132,7 +132,7 @@
     <div class="h-[330px] w-auto shadow-md rounded-lg p-7">
       <div class="flex justify-between">
         <img class="h-[45px] w-[45px] bg-[#FFE3E2] p-2 rounded-xl" src="./assets/emergency.png" alt="">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <span class="icon-heart cursor-pointer"><i class="fa-regular fa-heart"></i></span>
       </div>
       <h2 class="text-[24px] font-bold mt-3">Anti-Corruption Helpline</h2>
       <p class="font-[400] mb-3">Anti-Corruption</p>
@@ -148,7 +148,7 @@
     <div class="h-[330px] w-auto shadow-md rounded-lg p-7">
       <div class="flex justify-between">
         <img class="h-[45px] w-[45px] bg-[#FFE3E2] p-2 rounded-xl" src="./assets/emergency.png" alt="">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <span class="icon-heart cursor-pointer"><i class="fa-regular fa-heart"></i></span>
       </div>
       <h2 class="text-[24px] font-bold mt-3">Electricity Helpline</h2>
       <p class="font-[400] mb-3">Electricity Outage</p>
@@ -164,7 +164,7 @@
     <div class="h-[330px] w-auto shadow-md rounded-lg p-7">
       <div class="flex justify-between">
         <img class="h-[45px] w-[45px] bg-[#FFE3E2] p-2 rounded-xl" src="./assets/emergency.png" alt="">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <span class="icon-heart cursor-pointer"><i class="fa-regular fa-heart"></i></span>
       </div>
       <h2 class="text-[24px] font-bold mt-3">Brac Helpline</h2>
       <p class="font-[400] mb-3">Brac</p>
@@ -181,7 +181,7 @@
     <div class="h-[330px] w-auto shadow-md rounded-lg p-7">
       <div class="flex justify-between">
         <img class="h-[45px] w-[45px] bg-[#FFE3E2] p-2 rounded-xl" src="./assets/emergency.png" alt="">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <span class="icon-heart cursor-pointer"><i class="fa-regular fa-heart"></i></span>
       </div>
       <h2 class="text-[24px] font-bold mt-3">Bangladesh Railway Helpline </h2>
       <p class="font-[400] mb-3">Bangladesh Railway</p>
@@ -209,5 +209,7 @@
            </div>
       </div>
 
+
+      <script src="js/index.js"></script>
 </body>
 </html>
