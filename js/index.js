@@ -12,11 +12,22 @@ for(let icons of icon){
     })
 }
 
-// call button section
-document.getElementById('call-btn').addEventListener('click', function(e){
-    e.preventDefault();
-    const serviceName = document.getElementById("service-name").innerText;
-    const serviceNumber = document.getElementById("service-number").innerText;
+// Buttons alert section
 
-    alert("📞 Calling" + " " + serviceName + ",  " + serviceNumber)
-})
+function showAlert(card){
+    const serviceName = card.querySelector(".service-name").innerText;
+    const serviceNumber = card.querySelector('.service-number').innerText;
+
+    alert(`📞 Calling ${serviceName}, ${serviceNumber}`);
+}
+
+  const buttons = document.querySelectorAll('.call-btn');
+
+  for(const btn of buttons){
+    btn.addEventListener('click', function(e){
+        e.preventDefault();
+        const card = btn.closest(".card"); 
+        showAlert(card);
+    })
+  }
+
