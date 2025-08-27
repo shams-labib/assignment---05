@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="cards-section">
+  <div class="card">
+    <h2 class="service-name">National Emergency Number</h2>
+    <p class="service-number">999</p>
+    <button class="call-btn">📞 Call</button>
+  </div>
+
+  <div class="card">
+    <h2 class="service-name">Police Helpline</h2>
+    <p class="service-number">999</p>
+    <button class="call-btn">📞 Call</button>
+  </div>
+</section>
+
+<!-- History Section -->
+<section id="history-section">
+  <h2>📜 Call History</h2>
+  <ul id="history-list"></ul>
+</section>
+
+
+<script>
+    function showAlert(card) {
+    const serviceName = card.querySelector(".service-name").innerText;
+    const serviceNumber = card.querySelector(".service-number").innerText;
+
+    alert(`📞 Calling ${serviceName}, ${serviceNumber}`);
+
+    addToHistory(serviceName, serviceNumber);
+}
+
+function addToHistory(name, number) {
+    const historyList = document.getElementById("history-list");
+
+    // current time
+    const now = new Date();
+    const time = now.toLocaleTimeString();
+
+    // create li
+    const li = document.createElement("div");
+    li.innerHTML = `<strong>${name}</strong> - ${number} <span style="color:gray">(${time})</span>`;
+
+    // add to top (recent first)
+    historyList.prepend(li);
+}
+
+// Attach event
+const buttons = document.querySelectorAll('.call-btn');
+for(const btn of buttons){
+    btn.addEventListener('click', function(e){
+        e.preventDefault();
+        const card = btn.closest(".card"); 
+        showAlert(card);
+    })
+}
+
+</script>
+</body>
+</html>

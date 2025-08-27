@@ -19,7 +19,10 @@ function showAlert(card){
     const serviceNumber = card.querySelector('.service-number').innerText;
 
     alert(`📞 Calling ${serviceName}, ${serviceNumber}`);
+
+    addToHistory(serviceName, serviceNumber);
 }
+
 
   const buttons = document.querySelectorAll('.call-btn');
 
@@ -33,7 +36,7 @@ function showAlert(card){
         document.getElementById("coin-btn").innerText = coinSub;
         }
         else{
-            alert('আপনার একাউন্টে পর্যাপ্ত কয়েন নেই, কল করতে ২০টি কয়েন লাগবে।')
+            alert('❌ আপনার একাউন্টে পর্যাপ্ত কয়েন নেই, কল করতে ২০টি কয়েন লাগবে।')
             return;
         }
 
@@ -41,8 +44,38 @@ function showAlert(card){
 
         const card = btn.closest(".card"); 
         showAlert(card);
-
        
     })
+
+  }
+
+   function addToHistory(name, number) {
+    let historyList = document.getElementById("history-list");
+
+    const historybtn = document.getElementById("history-btn");
+
+
+    // current time
+    const time = new Date().toLocaleTimeString();
+
+    // create li
+    const div = document.createElement("div");
+    div.innerHTML = ` <div class="flex justify-between p-6">
+                         <div>
+                           <h1 class="font-[700]">${name}</h1>
+                           <p class="font-[400]">${number}</p>
+                         </div>
+                          <div>
+                            <p class="font-[400]">${time}</p>
+                          </div>
+                        </div>`;
+
+    // add to top (recent first)
+    historyList.prepend(div);
+
+    historybtn.addEventListener('click', function(){
+           historyList.innerHTML = "";
+    })
+
   }
 
