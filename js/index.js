@@ -25,9 +25,24 @@ function showAlert(card){
 
   for(const btn of buttons){
     btn.addEventListener('click', function(e){
+        
         e.preventDefault();
+         const coin = parseInt(document.getElementById("coin-btn").innerText)
+        if(coin > 0){
+        const coinSub = coin - 20;
+        document.getElementById("coin-btn").innerText = coinSub;
+        }
+        else{
+            alert('You have no coins')
+            return;
+        }
+
+
+
         const card = btn.closest(".card"); 
         showAlert(card);
+
+       
     })
   }
 
