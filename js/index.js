@@ -33,7 +33,7 @@ function showAlert(card){
         document.getElementById("coin-btn").innerText = coinSub;
         }
         else{
-            alert('You have no coins')
+            alert('আপনার একাউন্টে পর্যাপ্ত কয়েন নেই, কল করতে ২০টি কয়েন লাগবে।')
             return;
         }
 
