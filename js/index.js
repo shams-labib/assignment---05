@@ -18,5 +18,5 @@ document.getElementById('call-btn').addEventListener('click', function(e){
     const serviceName = document.getElementById("service-name").innerText;
     const serviceNumber = document.getElementById("service-number").innerText;
 
-    alert("Service name:" + serviceName + ", Service Number :" + serviceNumber)
+    alert("📞 Calling" + " " + serviceName + ",  " + serviceNumber)
 })
