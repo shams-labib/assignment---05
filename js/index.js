@@ -11,3 +11,12 @@ for(let icons of icon){
         heartIcon.innerText = iconValue;
     })
 }
+
+// call button section
+document.getElementById('call-btn').addEventListener('click', function(e){
+    e.preventDefault();
+    const serviceName = document.getElementById("service-name").innerText;
+    const serviceNumber = document.getElementById("service-number").innerText;
+
+    alert("Service name:" + serviceName + ", Service Number :" + serviceNumber)
+})
