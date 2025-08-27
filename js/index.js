@@ -79,19 +79,4 @@ function showAlert(card){
 
   }
 
-  // Copy section Work
-
-  const copyE1 = document.querySelectorAll('.copyBtn');
-  for(let btn of copyE1){
-    btn.addEventListener('click', function(){
-      let mainCopy = parseInt(document.getElementById("main-copy").innerText);  
-       const card = btn.closest('.card');
-    const text = card.querySelector('.service-number').textContent.trim();
-    navigator.clipboard.writeText(text)
-      .then(() => alert('Copied: ' + text))
-      .catch(() => alert('Copy failed — try manual select'));
-      mainCopy++;
-      document.getElementById("main-copy").innerText = mainCopy;
-
-    })
-  }
+  
